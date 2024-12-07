@@ -3,11 +3,14 @@
 
 
 ** Contributors: @Manthan8567, @ocampo2001k (I worked as @sadoyh account)
-** The main repository: https://github.com/Manthan8567/Cosmo-Ranger
+
+** Main repository: https://github.com/Manthan8567/Cosmo-Ranger
 
 
 Language: C#
+
 Platform: PC
+
 Game Engine: Unity
 
 

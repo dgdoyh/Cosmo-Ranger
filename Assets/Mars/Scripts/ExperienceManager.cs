@@ -13,16 +13,16 @@ public class ExperienceManager : MonoBehaviour
         if (Singleton == null)
         {
             Singleton = this;
+            Debug.Log(this.gameObject.name + " created");
             DontDestroyOnLoad(this.gameObject);
         }
         else
         {
+            Debug.Log(this.gameObject.name + " destroyed");
             Destroy(this.gameObject);
         }
     }
     #endregion
-
-    [SerializeField] Health playerHealth; // Reference to the Health component
 
     public int currentLevel = 1;
     public float currentExperience = 0;
@@ -45,17 +45,11 @@ public class ExperienceManager : MonoBehaviour
         }
     }
 
-    private void LevelUp()
+    public void LevelUp()
     {
         currentLevel++;
         currentExperience -= expForNextLevel;
         expForNextLevel *= 2;
-
-        // Restore max health upon leveling up 
-        if (playerHealth != null)
-        {
-            playerHealth.Heal(playerHealth.MaxHealth); // Restore health using public method from Health class
-        }
 
         // Update attack damage upon leveling up
         if (PlayerStateMachine.Instance != null)

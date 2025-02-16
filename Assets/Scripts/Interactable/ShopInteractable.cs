@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,9 @@ public class ShopInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
     [SerializeField] private GameObject ShopUI_Display;
-    [SerializeField] private PlayerStateMachine playerStateMachine; // Reference to the player's state machine
-    [SerializeField]private Animator playerAnimator;
+    [SerializeField] private PlayerStateMachine playerStateMachine;
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private CinemachineInputProvider cinemachineInput;
 
     private void Start()
     {
@@ -32,17 +34,13 @@ public class ShopInteractable : MonoBehaviour, IInteractable
         ShopUI_Display.SetActive(true);
 
         playerStateMachine.enabled = false;
-
-        if (playerAnimator != null)
-        {
-            playerAnimator.speed = 0f;
-        }
+        cinemachineInput.enabled = false;
     }
 
     public void ExitShop()
     {
         playerStateMachine.enabled = true;
-        playerAnimator.speed = 1f;
+        cinemachineInput.enabled = true;
 
         ShopUI_Display.SetActive(false);
     }

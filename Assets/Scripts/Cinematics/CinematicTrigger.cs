@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ using UnityEngine.Playables;
 public class CinematicTrigger : MonoBehaviour
 {
     [SerializeField] private CharacterController playerCharacterController;
+    [SerializeField] private CinemachineInputProvider cinemachineInput;
 
     private PlayableDirector playableDirector;
 
@@ -29,6 +31,7 @@ public class CinematicTrigger : MonoBehaviour
         {
             // Player cannot move while playing cinematics
             playerCharacterController.enabled = false;
+            cinemachineInput.enabled = false;
 
             playableDirector.Play();
             isPlayed = true;
@@ -44,5 +47,6 @@ public class CinematicTrigger : MonoBehaviour
 
         // Player can move again after the cinematic ends
         playerCharacterController.enabled = true;
+        cinemachineInput.enabled = true;
     }
 }

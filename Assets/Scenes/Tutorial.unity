@@ -4897,14 +4897,14 @@ PrefabInstance:
     - {fileID: 7456391891736330887, guid: 4b288e2d64437824e9158d77e9fe4285, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8003661312188493815, guid: 4b288e2d64437824e9158d77e9fe4285, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 854896291}
-    - targetCorrespondingSourceObject: {fileID: 8003661312188493815, guid: 4b288e2d64437824e9158d77e9fe4285, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 1010431691}
     - targetCorrespondingSourceObject: {fileID: 8003661312188493815, guid: 4b288e2d64437824e9158d77e9fe4285, type: 3}
-      insertIndex: -1
+      insertIndex: 1
       addedObject: {fileID: 2107737041}
+    - targetCorrespondingSourceObject: {fileID: 8003661312188493815, guid: 4b288e2d64437824e9158d77e9fe4285, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 854896291}
     - targetCorrespondingSourceObject: {fileID: 8003661312188493815, guid: 4b288e2d64437824e9158d77e9fe4285, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2131184305}
@@ -6486,15 +6486,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5449068862495418092, guid: 4269aca7ae61abe408752eb53c0fc12f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00019621632
+      value: 0.00019621916
       objectReference: {fileID: 0}
     - target: {fileID: 5449068862495418092, guid: 4269aca7ae61abe408752eb53c0fc12f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.16206364
+      value: -0.16206366
       objectReference: {fileID: 0}
     - target: {fileID: 5449068862495418092, guid: 4269aca7ae61abe408752eb53c0fc12f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00003222554
+      value: 0.00003222612
       objectReference: {fileID: 0}
     - target: {fileID: 5481409158994797959, guid: 4269aca7ae61abe408752eb53c0fc12f, type: 3}
       propertyPath: m_Lens.FieldOfView
@@ -6594,11 +6594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8253465488740965244, guid: 4269aca7ae61abe408752eb53c0fc12f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.16182482
+      value: -0.16182485
       objectReference: {fileID: 0}
     - target: {fileID: 8253465488740965244, guid: 4269aca7ae61abe408752eb53c0fc12f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.008794846
+      value: 0.008794848
       objectReference: {fileID: 0}
     - target: {fileID: 8778894403177015019, guid: 4269aca7ae61abe408752eb53c0fc12f, type: 3}
       propertyPath: m_Lens.FieldOfView
@@ -8307,7 +8307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302672964}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05048305, y: -0.16185145, z: 0.008291074, w: 0.9854882}
+  m_LocalRotation: {x: 0.050483048, y: -0.1618515, z: 0.008291075, w: 0.9854881}
   m_LocalPosition: {x: -10.623201, y: 1.5333923, z: -18.116817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12698,17 +12698,17 @@ MonoBehaviour:
     <combat>
 
     Attack
-    : Mouse Left Key
+    : F Key
 
     Targeting Mode : Tab
 
     Block : mouse right key
 
-    dodge
-    : shift
+    dodge : shift
 
 
-    * block and dodge are only available on targeting mode *'
+    *
+    block and dodge are only available on targeting mode *'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}

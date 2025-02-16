@@ -9,6 +9,7 @@ public class NPCRunAfterTalk : MonoBehaviour
     [SerializeField] Transform destination;
 
     private float rangeCloseEnough = 0.5f;
+    private bool isArrived; // Is NPC already ran and arrived at the destination?
 
 
     private void Start()
@@ -23,6 +24,8 @@ public class NPCRunAfterTalk : MonoBehaviour
         // If the NPC arrives at the destination, stop running animation
         if (distanceToDestination < rangeCloseEnough)
         {
+            isArrived = true;
+
             this.transform.rotation = destination.rotation;
             GetComponent<Animator>().SetBool("isRunning", false);
         }
@@ -30,7 +33,10 @@ public class NPCRunAfterTalk : MonoBehaviour
 
     public void RunToDestination(bool notUsedHere)
     {
-        GetComponent<NavMeshAgent>().SetDestination(destination.position);
-        GetComponent<Animator>().SetBool("isRunning", true);
+        if (!isArrived)
+        {
+            GetComponent<NavMeshAgent>().SetDestination(destination.position);
+            GetComponent<Animator>().SetBool("isRunning", true);
+        }
     }
 }

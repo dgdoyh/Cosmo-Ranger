@@ -20,7 +20,7 @@ public class HpBarManager : MonoBehaviour
 
         // When the game starts, update HP bar.
         // Parameter doesn't do anything here.
-        UpdateHPBar(0);
+        FillHPBarFull();
     }
 
     private void OnDisable()

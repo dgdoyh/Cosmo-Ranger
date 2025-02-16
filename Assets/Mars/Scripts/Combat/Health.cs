@@ -19,10 +19,17 @@ public class Health : MonoBehaviour
     public float CurrHealth { get => currHealth; }
 
     public bool IsDead => currHealth == 0;
-
-    private void Awake()
+    
+    private void Start()
     {
         currHealth = maxHealth;
+
+        ExperienceManager.Singleton.OnLevelUp += SetHealthFull;
+    }
+
+    private void OnDisable()
+    {
+        ExperienceManager.Singleton.OnLevelUp -= SetHealthFull;
     }
 
     public void SetInvunerable(bool isInvunerable)
@@ -50,5 +57,10 @@ public class Health : MonoBehaviour
     {
         currHealth = Mathf.Min(currHealth + healAmount, maxHealth);
         OnHeal?.Invoke((int)healAmount);
+    }
+
+    public void SetHealthFull()
+    {
+        currHealth = maxHealth;
     }
 }

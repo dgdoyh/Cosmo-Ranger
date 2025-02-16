@@ -15,7 +15,7 @@ public class PlayerSfxManager : MonoBehaviour
 
     private string levelUpSfx = "LevelUp";
 
-    private void OnEnable()
+    private void Start()
     {
         health = GetComponent<Health>();
 
